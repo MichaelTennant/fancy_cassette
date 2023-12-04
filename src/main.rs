@@ -2,5 +2,9 @@ mod files;
 
 fn main() {
     println!("Hello, world!");
-    files::list();
+
+    let mut music_files: Vec<String> = Vec::new();
+    files::list(&mut music_files);
+
+    println!("{:?}", music_files)
 }
